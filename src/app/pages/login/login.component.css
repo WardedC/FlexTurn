@@ -1,3 +1,26 @@
-:host {
-  display: block;
-}
+        body {
+            background-color: #e4ecff; /* Fondo crema */
+        }
+
+        @keyframes bounce-in {
+          0% {
+              opacity: 0;
+              transform: scale(0.9);
+          }
+          60% {
+              opacity: 1;
+              transform: scale(1.05);
+          }
+          80% {
+              transform: scale(0.98);
+          }
+          100% {
+              transform: scale(1);
+          }
+      }
+
+
+
+        .animate-bounce-in {
+            animation: bounce-in 1s ease-out;
+        }
