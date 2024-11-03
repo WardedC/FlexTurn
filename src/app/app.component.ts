@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -11,7 +11,15 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent {
   title = 'FlexTurn';
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
-    initFlowbite();
+
+    // Escuchar el evento NavigationEnd para ejecutar initFlowbite en cada navegación completa
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        initFlowbite();
+      }
+    });
   }
 }

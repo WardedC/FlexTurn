@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
 
 
 @Component({
@@ -16,8 +17,4 @@ import { RouterModule } from '@angular/router';
 })
 export class LoginComponent {
 
-
-  navigateToHome(){
-
-  }
 }
